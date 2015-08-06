@@ -1,0 +1,182 @@
+<!doctype html>
+<html>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<title>電通大生が教える高校生のためのプログラミング教室 サポートページ by vbseminar</title>
+<link rel="stylesheet" href="../stylesheets/styles.css">
+<link rel="stylesheet" href="../stylesheets/github-dark.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="../javascripts/main.js"></script>
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+<style>
+.cf:before, .cf:after{ content:""; display: table; }
+.cf:after{ clear:both; }
+.cf{ *zoom:1; }
+
+ul {
+  padding-left: 30px;
+}
+
+ul ul {
+  padding-left: 15px;
+}
+
+p {
+  text-indent: 1em;
+}
+</style>
+<header>
+<h1>電通大生が教える高校生のためのプログラミング教室 サポートページ</h1>
+<p>vbseminar.github.io</p>
+</header>
+
+<div id="banner">
+<span id="logo"></span>
+
+<a href="https://github.com/vbseminar" class="button fork"><strong>View On GitHub</strong></a>
+</div><!-- end banner -->
+
+<div class="wrapper">
+<nav>
+  <ul></ul>
+</nav>
+<section>
+
+<h2>基板・回路詳細</h2>
+<p>家でも続きのプログラミングがしたい方へ</p>
+<h3 class="link">最低限必要なもの</h3>
+<ul>
+  <li>パソコン</li>
+  <li>持ち帰った基板</li>
+  <li>マイコン書き込み機(ライタ)</li>
+</ul>
+
+<h3 class="link">パソコンのセットアップ</h3>
+<ul>
+  <li>Arduinoの開発環境をインストール (参照:<a href="https://www.arduino.cc/">https://www.arduino.cc/)</a></li>
+  <li>Magic.hなどを配置 (参照: <a href="http://vbseminar.github.io/">http://vbseminar.github.io/)</a></li>
+  <li>(必要に応じて)ライタのドライバのインストール</li>
+  <li>ライブラリのダウンロード/配置<br>
+  <ul>
+    <li><a href="https://github.com/vbseminar/Magic.h/archive/master.zip">Magic.h のダウンロード</a>
+    <li>Windowsの場合<br>
+    ドキュメントフォルダにある Arduino フォルダの libraries フォルダの中に、<strong>magic</strong> という名前のフォルダを作り、その中にダウンロードした zip ファイルの中身を置いてください。<br>
+    パスで表現すると、<code>Documents/Arduino/libraries/magic</code>です。
+    </li>
+    <li>Mac OS Xの場合<br>
+    書類フォルダにある Arduino フォルダの libraries フォルダの中に、<strong>magic</strong> という名前のフォルダを作り、その中にダウンロードした zip ファイルの中身を置いてください。<br>
+    パスで表現すると、<code>~/Documents/Arduino/libraries/magic</code>です。
+    </li>
+  </ul>
+  分からない場合には、「Arduino ライブラリ インストール」などで検索してみてください。 <br>
+  (問い合わせ/質問等については今後検討します。)
+</ul>
+
+<h3 class="link">持ち帰った基板</h3>
+<strong>※単体でパソコンと接続することはできません。</strong>
+<p>次に述べるマイコン書き込み機で、下図のように配線してください。
+
+<p>間違えると基板が発熱し大変危険ですのでご注意ください。
+
+<div style="clear: both;" class="cf">
+  <table style="float: left; width: auto">
+    <thead>
+      <tr>
+        <th>マイコン側の表示</th>
+        <th>書き込み機側の表示</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>BLK(GND)</td><td>GND</td></tr>
+      <tr><td>GND</td><td>CTS(GND)</td></tr>
+      <tr><td>VCC</td><td>VCC(3V3など)</td></tr>
+      <tr><td>RXI</td><td>TXD</td></tr>
+      <tr><td>TXD</td><td>RXI</td></tr>
+      <tr><td>GRN</td><td>DTR</td></tr>
+    </tbody>
+  </table>
+  <div class="image" style="width: 288px; float: right;">
+    <img src="./images/arduino.png" alt="Arduino Pro mini">
+  </div>
+
+</div>
+
+<h3 class="link">ライタ</h3>
+<ul>
+  <li>Arduinoにプログラムを書き込むために必要なものです。</li>
+  <li>3.3V動作用Arduino製品群向けのUSB-シリアル変換アダプタを購入してください。</li>
+  <li>今回教室で利用したものはこちら(AlibabaExpressの商品ページ)のものですが、これである必要はありません。</li>
+  <li>購入しやすいものとしてはDEV-09873(SparkFun社)や、SSCI-010320(SWITCHSCIEHNCE社)などが使えるはずです。</li>
+  <li>コネクタのオス・メスは製品により異なるので必要に応じてパーツを追加してください。</li>
+  <li>電圧が変更可能な場合は3.3Vにセットしてご利用ください。</li>
+</ul>
+
+<h3 class="link">教室で使用したパーツリスト</h3>
+<table>
+  <thead>
+    <tr><th>種類</th><th>型番</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>LED</td><td>OSTA-5131A</td></tr>
+    <tr><td>加速度センサ</td><td>ADXL345</td></tr>
+    <tr><td>Arduino pro mini</td><td>(8Mhz,3.3v,ATmega328)</td></tr>
+    <tr><td>ボタン電池ボックス</td><td>CR2032サイズ</td></tr>
+    <tr><td>ボタン電池*2</td><td>CR2016</td></tr>
+  </tbody>
+</table>
+
+<h3 class="link">各パーツの役割</h3>
+<ul>
+  <li><b>LED</b></li>
+    <p>言わずと知れた光る奴。
+    <p>今回用いたものは内部にマイクロコントローラーが入っていて、専用の信号を流すことで色を制御する。内部に「赤」「青」「緑」に光るLEDが配置されていて、内臓のマイコンがそれぞれの光の強さを制御している。光の三原色の原理。          <p>このLEDは数珠つなぎにすることができて、信号に「何番目のLEDを」「どの色で光らせるか」を載せて送信すると内蔵マイコンが勝手に処理してくれる。ただし今回は簡単のため命令を変えて使いやすくしてある。　参照:Magic.h
+
+  <li><b>加速度センサ</b></li>
+    <p>LEDが出力なら、こいつは入力。
+    <p>センサが受けている加速度を検知し、マイコン(今回はArduino Pro Mini)にデータを送る。
+    <p>受けている加速度(G)以外にもセンサの基板内部の処理で「タップ」「ダブルタップ」「動作」「自由落下」の検知をしている。今回は簡単のためこれらの機能をさらにわかりやすく変えて利用している。
+  　<p>I2Cと呼ばれる信号の規格でマイコンとデータをやりとりしている。
+
+  <li><b>Arduino pro mini</b></li>
+    <p>入力と出力の間にある、いわば頭脳。
+    <p>加速度センサから受け取ったデータを書き込まれたプログラムにしたがって処理し、プログラムに従って出力してLEDを光らせる。
+    <p>内部に入力された電圧を3.3Vに変換するパーツが入っている。
+    <p>これによりLEDには6V、他のパーツには3.3Vを供給している。コイツ自身は3.3Vで動作する。詳細は回路図参照。
+  <li><b>ボタン電池ボックス</b></li>
+    <p>直径20mm高さ3.2mmの大きさのコイン形電池を一枚保持する。
+  <li><b>ボタン電池</b></li>
+    <p>直径20mm高さ1.6mmのものを二枚重ねて利用。電気的には直列となり6Vの電源として利用できる。
+</ul>
+
+<h3 class="link">回路図及び配線図</h3>
+  <ul>
+    <li><a href="./eagle_files.zip">回路図と配線図のダウンロード (eagle_files.zip)</a></li>
+    <li>詳しくは <code>ArduinoFullColorLED.brd</code> および <code>ArduinoFullColorLED.sch</code>を参照。</li>
+    <li>回路図及び配線図の作成には CadSoft Computer 社の <a href="http://www.cadsoftusa.com/">EAGLE</a> を利用。</li>
+  </ul>
+<div class="image"><img src="./images/circuit.png" alt="回路図"></div>
+  <ul>
+    <li>右の箱から出ているのが6V。</li>
+    <li>LEDは6Vで動いている。</li>
+    <li>ArduinoのRAWピンに入ったあと、3.3に変換されマイコンとセンサに給電される。</li>
+    <li>センサとのデータのやり取りはSDA/SCLピンで行なっている。</li>
+  </ul>
+<div class="image"><img src="./images/board.png" alt="配線図" style="width: 50%;"></div>
+  <ul>
+    <li>このデータを元に、基板加工機で生産を行いました。</li>
+    <li>青色が上回路図の緑線に相当します。</li>
+    <li>緑の穴が部品を配線する際に使うものです。</li>
+  </ul>
+
+</section>
+<footer>
+<p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+</footer>
+</div>
+<!--[if !IE]><script>fixScale(document);</script><![endif]-->
+
+</html>
